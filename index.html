@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Avyanna Poetry</div>
+    
+            <!-- Hamburger Icon -->
+            <div class="hamburger" id="hamburger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+    
+            <!-- Navigation Links -->
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#poems">Poems</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section id="home" class="hero">
+        <h1>Welcome to My Poetry Collection</h1>
+        <p>"Sunsets are my wine."</p>
+        <a href="#poems" class="cta">Explore Poems</a>
+    </section>
+
+    <section id="poems" class="poetry-collection">
+        <h2>Poetry Collection</h2>
+        <!-- Carousel Container -->
+        <div class="carousel">
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-wrapper">
+                <div class="carousel-track">
+                    <!-- Poem Card 1 -->
+                    <div class="poem-card light-gray">
+                        <h3>.01</h3>
+                        <div class="img_adjust">
+                            <img src="./poet1.avif" height="120px" width="300px">
+                        </div>
+             
+                        <h4>Consumed or Void:<br>The Duality of Art and Thought</h4>
+                        <p>Welcome, fellow creatives! I’m Rae Shoemaker...</p>
+                        <a href="javascript:void(0);" onclick="openModal(0)">Discover the Poem</a>
+
+                    </div>
+                    <!-- Poem Card 2 -->
+                    <div class="poem-card dark-brown">
+                        <h3>.02</h3>
+                        <div class="img_adjust">
+                            <img src="./poetry2.webp" height="120px" width="300px">
+                        </div>
+             
+                        <h4>Lost and Found:<br>A Journey Through Identity</h4>
+                        <p>Welcome back. I’m Rae Shoemaker...</p>
+                        <a href="javascript:void(0);" onclick="openModal(1)">Discover the Poem</a>
+
+                    </div>
+                    <!-- Poem Card 3 -->
+                    <div class="poem-card dark-gray">
+                        <h3>.03</h3>
+                        <div class="img_adjust">
+                            <img src="./poet3.png" height="120px" width="300px">
+                        </div>
+             
+                        <h4>Oversharing: A Portrait</h4>
+                        <p>Today’s piece is all about peeling back...</p>
+                        <a href="javascript:void(0);" onclick="openModal(2)">Discover the Poem</a>
+
+                    </div>
+                    <!-- Poem Card 4 -->
+                    <div class="poem-card light-cream">
+                        <h3>.04</h3>
+                        <div class="img_adjust">
+                            <img src="./poet3.png" height="120px" width="300px">
+                        </div>
+                        <h4>Embracing the Unknown</h4>
+                        <p>Hey there. Today, I’m sharing a piece...</p>
+                        <a href="javascript:void(0);" onclick="openModal(3)">Discover the Poem</a>
+
+                    </div>
+                    <!-- Poem Card 5 -->
+                    <div class="poem-card dark-red">
+                        <h3>.05</h3>
+                        <div class="img_adjust">
+                            <img src="./poet3.png" height="120px" width="300px">
+                        </div>
+                        <h4>Fool's Gold: Echoes of Lost Promises</h4>
+                        <p>Welcome, fellow creatives!...</p>
+                        <a href="javascript:void(0);" onclick="openModal(4)">Discover the Poem</a>
+
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="about-container">
+            <div class="profile-image">
+                <img src="./vijju_ppf.jpeg" alt="Poet's photo" />
+            </div>
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>Hi! I am a passionate poet who finds joy in weaving emotions into words.</p>
+                <div class="social-media">
+             
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="./instagram-application-logo_23-2151544100.avif" alt="Instagram" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- 
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email">
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section> -->
+
+    <footer>
+        <p>© 2024 Shashidhar Reddy Patel. All Rights Reserved.</p>
+    </footer>
+<!-- Modal Dialog Box -->
+<div id="poemModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3 id="modal-title"></h3>
+        <div class="modal-body" id="modal-body">
+            <!-- Poem Content will be inserted dynamically -->
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
